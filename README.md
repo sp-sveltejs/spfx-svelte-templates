@@ -1,6 +1,6 @@
 # spfx-svelte-templates
 
-## Collection of SPFx svelte integrations to kick start native SPfx support for svelte
+## Collection of SPFx svelte integrations to kickstart native SPfx support for svelte
 
 ## Quick Start
 
