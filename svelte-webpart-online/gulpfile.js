@@ -8,7 +8,23 @@ build.addSuppression(`Warning - [sass] The local CSS class 'ms-Grid' is not came
 build.configureWebpack.mergeConfig({
     additionalConfiguration: (generatedConfiguration) => {
      
-      generatedConfiguration.module.rules.push(
+        generatedConfiguration.module.rules.push(
+            {
+              test: /\.(html|svelte)$/,
+              exclude: /node_modules/,
+              use: {
+                loader: 'svelte-loader',
+                options: {
+                  preprocess: require('svelte-preprocess')({
+    
+                }),
+                },
+              },
+            },
+            
+            
+          );
+        generatedConfiguration.module.rules.push(
         {
             test: /\.m?js$/, use:
             {
@@ -41,22 +57,7 @@ build.configureWebpack.mergeConfig({
          }
       
        });
-       generatedConfiguration.module.rules.push(
-        {
-          test: /\.(html|svelte)$/,
-          exclude: /node_modules/,
-          use: {
-            loader: 'svelte-loader',
-            options: {
-              preprocess: require('svelte-preprocess')({
-
-            }),
-            },
-          },
-        },
-        
-        
-      );
+       
       return generatedConfiguration;
     }
   });
