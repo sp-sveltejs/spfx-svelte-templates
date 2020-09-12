@@ -1,17 +1,19 @@
 {
+  "extends": "./node_modules/@microsoft/rush-stack-compiler-3.9/includes/tsconfig-web.json",
   "compilerOptions": {
     "moduleResolution": "node",
-    "target": "es6",
+    "target": "ES2017",
     /** 
       Svelte Preprocess cannot figure out whether you have a value or a type, so tell TypeScript
       to enforce using `import type` instead of `import` for Types.
      */
-    //"importsNotUsedAsValues": "error",
-    "isolatedModules": true,
+    "importsNotUsedAsValues": "error",
+   // "isolatedModules": true,
     /**
       To have warnings/errors of the Svelte compiler at the correct position,
       enable source maps by default.
      */
+    "noUnusedLocals": false,
     "sourceMap": true,
     "strict": false,
     "esModuleInterop": true,

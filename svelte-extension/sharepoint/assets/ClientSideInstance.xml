@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ClientSideComponentInstance
+        Title="AppCustomizer"
+        Location="ClientSideExtension.ApplicationCustomizer"
+        ComponentId="6d1e5319-06a4-4d79-83cb-4582072aa739"
+        Properties="{&quot;testMessage&quot;:&quot;Test message&quot;}">
+    </ClientSideComponentInstance>
+</Elements>
