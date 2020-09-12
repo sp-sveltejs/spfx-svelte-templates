@@ -1,0 +1,11 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "isCreatingSolution": true,
+    "environment": "onprem19",
+    "version": "1.11.0",
+    "libraryName": "svelte-webpart",
+    "libraryId": "d619ebde-838e-4787-b86b-6424239a25e2",
+    "packageManager": "npm",
+    "componentType": "webpart"
+  }
+}
