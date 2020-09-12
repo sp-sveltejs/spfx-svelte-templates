@@ -18,12 +18,15 @@ export interface IHelloSvelteWebPartProps {
 export default class HelloSvelteWebPart extends BaseClientSideWebPart<IHelloSvelteWebPartProps> {
 
   public render(): void {
+    this.domElement.innerHTML = "<div></div>";
     const hello = new Hello({
       target: this.domElement,
       props: {
-        description: "Test"
+        description:  escape(this.properties.description), 
+        styles: styles
       }
     });
+   
     
     
   }
