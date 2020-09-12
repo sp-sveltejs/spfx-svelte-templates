@@ -6,7 +6,6 @@ import {
 } from '@microsoft/sp-webpart-base';
 import { escape } from '@microsoft/sp-lodash-subset';
 
-import styles from './HelloSvelteWebPart.module.scss';
 import * as strings from 'HelloSvelteWebPartStrings';
 import Hello from './Hello.svelte';
 export interface IHelloSvelteWebPartProps {
@@ -16,7 +15,7 @@ export interface IHelloSvelteWebPartProps {
 export default class HelloSvelteWebPart extends BaseClientSideWebPart<IHelloSvelteWebPartProps> {
 
   public render(): void {
-    const hello: typeof Hello = new Hello({
+    new Hello({
       target: this.domElement,
       props:{
         description: escape(this.properties.description)
