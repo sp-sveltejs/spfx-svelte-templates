@@ -24,39 +24,7 @@ build.configureWebpack.mergeConfig({
             
             
           );
-        generatedConfiguration.module.rules.push(
-        {
-            test: /\.m?js$/, use:
-            {
-              loader: "babel-loader",
-              options:
-              {
-                exclude:  /node_modules/ ,
-                /* Include modules requiring additional polyfills
-                include: [ 'node_modules/[module_name]/**',  'node_modules/[module_name]/**' ],
-                */
-               presets: [["@babel/preset-env",
-               {
-                   targets: 'IE 11',
-                   useBuiltIns: 'usage',
-                   corejs: 3
-               }]],
-               plugins: [
-                   '@babel/plugin-syntax-dynamic-import',
-                       [
-                           '@babel/plugin-transform-runtime',
-                           {
-                               corejs: 3,
-                             
-                               
-                           }
-                       ]
-                   ]
-           }
-      
-         }
-      
-       });
+        
        
       return generatedConfiguration;
     }
@@ -64,38 +32,3 @@ build.configureWebpack.mergeConfig({
 
 
 build.initialize(gulp);
-
-
-/*
-
-        {
-          test: /\.m?js$/, use:
-          {
-            loader: "babel-loader",
-            options:
-            {
-              exclude:  /node_modules/ ,
-              /* Include modules requiring additional polyfills
-              include: [ 'node_modules/[module_name]/**',  'node_modules/[module_name]/**' ],
-              
-             presets: [["@babel/preset-env",
-             {
-                 targets: 'IE 11',
-                 useBuiltIns: 'usage',
-                 corejs: 3
-             }]],
-             plugins: [
-                 '@babel/plugin-syntax-dynamic-import',
-                     [
-                         '@babel/plugin-transform-runtime',
-                         {
-                             corejs: 3,
-                           
-                             
-                         }
-                     ]
-                 ]
-         }
-       }
-     },
-*/

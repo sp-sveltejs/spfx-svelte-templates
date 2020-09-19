@@ -11,6 +11,7 @@ import * as strings from 'HelloSvelteWebPartStrings';
 
 import Hello from './Hello.svelte';
 
+import '@pnp/polyfill-ie11/';
 export interface IHelloSvelteWebPartProps {
   description: string;
 }
